@@ -50,16 +50,8 @@ public class Main {
     public static void task3_3() { // выполнение задания 3.3
 
         int year = 2021;
-        if (year % 400 == 0) {
+        if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
             System.out.println(year + " год является високосным.");
-        }
-        else if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                System.out.println(year + " год не является високосным.");
-            }
-            else {
-                System.out.println(year + " год является високосным.");
-            }
         }
         else {
             System.out.println(year + " год не является високосным.");
@@ -68,25 +60,21 @@ public class Main {
 
     public static void task3_4() { // выполнение задания 3.4
 
-        int deliveryDistance = 15;
-        int deliveryTime = 3;
+        int deliveryDistance = 50;
+        int deliveryTime = 1;
 
-        if (deliveryDistance >= 60 && deliveryDistance < 100) {
+        if (deliveryDistance >= 20) {
+            deliveryTime++;
+        }
+        if (deliveryDistance >= 60) {
+            deliveryTime++;
+        }
             System.out.println("Потребуется дней: " + deliveryTime);
         }
-        else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            deliveryTime = 2;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        }
-        else {
-            deliveryTime = 1;
-            System.out.println("Потребуется дней: " + deliveryTime);
-        }
-    }
 
     public static void task3_5() { // выполнение задания 3.5
 
-        int monthNumber = 25;
+        int monthNumber = 9;
 
         switch(monthNumber) {
             case 1:
